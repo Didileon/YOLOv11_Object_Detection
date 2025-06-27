@@ -75,13 +75,9 @@
 - **mAP**: средняя точность по порогам IoU.
 - **Precision и Recall**: точность и полнота распознавания.
 
-*Пример графика loss:*
+*График обучения:*
 
-![loss](runs/detect/train/plots/loss.png)
-
-*Пример графика метрик:*
-
-![metrics](runs/detect/train/plots/metrics.png)
+![results](runs/detect/train/results.png)
 
 ---
 
