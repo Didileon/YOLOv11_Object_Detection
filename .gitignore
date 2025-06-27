@@ -1,0 +1,4 @@
+# Файлы с секретами
+.env
+config.py
+secrets.json

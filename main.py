@@ -1,0 +1,1 @@
+print("Hello, YOLOv11 project!")

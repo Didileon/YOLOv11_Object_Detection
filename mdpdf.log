@@ -1,0 +1,167 @@
+    INFO: 2025-06-26 23:24:59,840:               log.py:   20: Logging to C:\Users\User\Desktop\PycharmProjects\YOLOv11_Object_Detection\mdpdf.log
+   DEBUG: 2025-06-26 23:24:59,841:               cli.py:  103: report.md
+    INFO: 2025-06-26 23:24:59,842:         converter.py:   14: report.md
+   DEBUG: 2025-06-26 23:24:59,851:      pdf_renderer.py:  470: printSegment: Финальный отчёт по обучению модели YOLOv11 для распознавания блюд
+   DEBUG: 2025-06-26 23:24:59,858:      pdf_renderer.py:  470: printSegment: 1. Подготовка данных
+   DEBUG: 2025-06-26 23:24:59,860:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:24:59,862:      pdf_renderer.py:  470: printSegment: Скачано видео и извлечены кадры (около 700 изображений).
+   DEBUG: 2025-06-26 23:24:59,867:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:24:59,870:      pdf_renderer.py:  470: printSegment: Ручная аннотация 229 изображений с помощью Roboflow (классы: alcohol, meat, salat, soup, tea).
+   DEBUG: 2025-06-26 23:24:59,873:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:24:59,874:      pdf_renderer.py:  470: printSegment: Разбиение на train/val/test с пропорциями примерно 70/15/15.
+   DEBUG: 2025-06-26 23:24:59,875:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:24:59,876:      pdf_renderer.py:  470: printSegment: Проведена аугментация данных для повышения разнообразия.
+   DEBUG: 2025-06-26 23:24:59,876:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:24:59,878:      pdf_renderer.py:  470: printSegment: Экспорт датасета из Roboflow в формате YOLOv11.
+   DEBUG: 2025-06-26 23:24:59,881:      pdf_renderer.py:  470: printSegment: 2. Параметры обучения и причины выбора
+   DEBUG: 2025-06-26 23:24:59,883:      pdf_renderer.py:  470: printSegment: | Параметр          | Значение                          | Комментарий                                      |
+   DEBUG: 2025-06-26 23:24:59,885:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:24:59,887:      pdf_renderer.py:  470: printSegment: |-------------------|---------------------------------|-------------------------------------------------|
+   DEBUG: 2025-06-26 23:24:59,888:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:24:59,903:      pdf_renderer.py:  470: printSegment: | Модель            | YOLOv11s
+   DEBUG: 2025-06-26 23:24:59,905:      pdf_renderer.py:  470: printSegment: (small)                 | Баланс между скоростью и точностью               |
+   DEBUG: 2025-06-26 23:24:59,905:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:24:59,907:      pdf_renderer.py:  470: printSegment: | Предобученная модель | Использована (transfer learning) | Для ускорения обучения и повышения качества     |
+   DEBUG: 2025-06-26 23:24:59,907:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:24:59,913:      pdf_renderer.py:  470: printSegment: | Эпохи             | 50                  
+   DEBUG: 2025-06-26 23:24:59,914:      pdf_renderer.py:  470: printSegment:            | Достаточно для сходимости на данном объёме данных |
+   DEBUG: 2025-06-26 23:24:59,917:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:24:59,919:      pdf_renderer.py:  470: printSegment: | Размер изображений | 640×640                         | Стандартный размер для хорошего баланса          |
+   DEBUG: 2025-06-26 23:24:59,920:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:24:59,930:      pdf_renderer.py:  470: printSegment: | Размер батча      | 8                               | С учётом
+   DEBUG: 2025-06-26 23:24:59,932:      pdf_renderer.py:  470: printSegment: ограничений CPU                          |
+   DEBUG: 2025-06-26 23:24:59,933:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:24:59,935:      pdf_renderer.py:  470: printSegment: | Аппаратное обеспечение | CPU (AMD Ryzen 5 3500U)       | Отсутствие GPU, что увеличивает время обучения   |
+   DEBUG: 2025-06-26 23:24:59,936:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,010:      pdf_renderer.py:  470: printSegment: | Время обучения    | ~10.3 часа           
+   DEBUG: 2025-06-26 23:25:00,012:      pdf_renderer.py:  470: printSegment:           | Длительное из-за отсутствия GPU                   |
+   DEBUG: 2025-06-26 23:25:00,022:      pdf_renderer.py:  470: printSegment: 3. Метрики качества модели
+   DEBUG: 2025-06-26 23:25:00,024:      pdf_renderer.py:  470: printSegment: | Метрика       | Значение |
+   DEBUG: 2025-06-26 23:25:00,026:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,031:      pdf_renderer.py:  470: printSegment: |---------------|----------|
+   DEBUG: 2025-06-26 23:25:00,032:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,034:      pdf_renderer.py:  470: printSegment: | Precision     | 0.963    |
+   DEBUG: 2025-06-26 23:25:00,035:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,036:      pdf_renderer.py:  470: printSegment: | Recall        | 0.96     |
+   DEBUG: 2025-06-26 23:25:00,037:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,039:      pdf_renderer.py:  470: printSegment: | mAP@0.5       | 0.965    |
+   DEBUG: 2025-06-26 23:25:00,039:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,041:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2025-06-26 23:25:00,042:      pdf_renderer.py:  470: printSegment: mAP@0.5:0.95  | 0.861    |
+   DEBUG: 2025-06-26 23:25:00,044:      pdf_renderer.py:  470: printSegment: 4. Результаты по классам
+   DEBUG: 2025-06-26 23:25:00,046:      pdf_renderer.py:  470: printSegment: | Класс   | Precision | Recall | mAP50  | mAP50-95 |
+   DEBUG: 2025-06-26 23:25:00,047:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,048:      pdf_renderer.py:  470: printSegment: |---------|-----------|--------|--------|----------|
+   DEBUG: 2025-06-26 23:25:00,049:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,052:      pdf_renderer.py:  470: printSegment: | meat    | 0.985     | 1.0    |
+   DEBUG: 2025-06-26 23:25:00,053:      pdf_renderer.py:  470: printSegment: 0.995  | 0.983    |
+   DEBUG: 2025-06-26 23:25:00,055:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,060:      pdf_renderer.py:  470: printSegment: | salat   | 0.993     | 1.0    | 0.995  | 0.991    |
+   DEBUG: 2025-06-26 23:25:00,061:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,063:      pdf_renderer.py:  470: printSegment: | soup    | 0.945     | 0.905  | 0.962  | 0.603    |
+   DEBUG: 2025-06-26 23:25:00,064:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,069:      pdf_renderer.py:  470: printSegment: | tea     |
+   DEBUG: 2025-06-26 23:25:00,071:      pdf_renderer.py:  470: printSegment: 0.931     | 0.933  | 0.908  | 0.866    |
+   DEBUG: 2025-06-26 23:25:00,074:      pdf_renderer.py:  470: printSegment: 5. Обучение и оптимизация гиперпараметров
+   DEBUG: 2025-06-26 23:25:00,076:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,078:      pdf_renderer.py:  470: printSegment: Отслеживались метрики: precision, recall, mAP@0.5, mAP@0.5:0.95, F1-score.
+   DEBUG: 2025-06-26 23:25:00,079:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,081:      pdf_renderer.py:  470: printSegment: Проведена одна полная итерация обучения.
+   DEBUG: 2025-06-26 23:25:00,083:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,086:      pdf_renderer.py:  470: printSegment: Планируется 1–2 итерации оптимизации гиперпараметров (learning rate, batch size, epochs).
+   DEBUG: 2025-06-26 23:25:00,102:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,104:      pdf_renderer.py:  470: printSegment: Текущие результаты показывают высокое качество, особенно по классам meat и salat.
+   DEBUG: 2025-06-26 23:25:00,106:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,107:      pdf_renderer.py:  470: printSegment: Для класса soup требуется улучшение.
+   DEBUG: 2025-06-26 23:25:00,110:      pdf_renderer.py:  470: printSegment: 6. Анализ ошибок и сложности
+   DEBUG: 2025-06-26 23:25:00,112:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,113:      pdf_renderer.py:  470: printSegment: Основная сложность — длительная ручная аннотация и подготовка данных в Roboflow.
+   DEBUG: 2025-06-26 23:25:00,127:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,129:      pdf_renderer.py:  470: printSegment: Обучение на CPU занимает много времени (около 10 часов), что ограничивает быструю итерацию.
+   DEBUG: 2025-06-26 23:25:00,131:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,133:      pdf_renderer.py:  470: printSegment: Класс soup имеет меньшую точность, возможно из-за меньшего количества и разнообразия данных.
+   DEBUG: 2025-06-26 23:25:00,135:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,137:      pdf_renderer.py:  470: printSegment: Использован подход transfer learning для ускорения обучения и повышения качества.
+   DEBUG: 2025-06-26 23:25:00,139:      pdf_renderer.py:  470: printSegment: 7. Графики метрик
+   DEBUG: 2025-06-26 23:25:00,140:      pdf_renderer.py:  470: printSegment: В папке 
+   DEBUG: 2025-06-26 23:25:00,143:      pdf_renderer.py:  470: printSegment: runs/detect/train/plots/
+   DEBUG: 2025-06-26 23:25:00,145:      pdf_renderer.py:  470: printSegment:  сохранены графики:
+   DEBUG: 2025-06-26 23:25:00,147:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,149:      pdf_renderer.py:  470: printSegment: Loss
+   DEBUG: 2025-06-26 23:25:00,152:      pdf_renderer.py:  470: printSegment:  (box
+   DEBUG: 2025-06-26 23:25:00,154:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2025-06-26 23:25:00,155:      pdf_renderer.py:  470: printSegment: loss, cls
+   DEBUG: 2025-06-26 23:25:00,156:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2025-06-26 23:25:00,157:      pdf_renderer.py:  470: printSegment: loss, dfl
+   DEBUG: 2025-06-26 23:25:00,158:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2025-06-26 23:25:00,160:      pdf_renderer.py:  470: printSegment: loss): показывает снижение ошибки по координатам боксов, классификации и распределению.
+   DEBUG: 2025-06-26 23:25:00,161:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,162:      pdf_renderer.py:  470: printSegment: mAP
+   DEBUG: 2025-06-26 23:25:00,163:      pdf_renderer.py:  470: printSegment: : средняя точность по порогам IoU.
+   DEBUG: 2025-06-26 23:25:00,165:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,167:      pdf_renderer.py:  470: printSegment: Precision и Recall
+   DEBUG: 2025-06-26 23:25:00,170:      pdf_renderer.py:  470: printSegment: : точность и полнота распознавания.
+   DEBUG: 2025-06-26 23:25:00,172:      pdf_renderer.py:  470: printSegment: Пример графика loss:
+   ERROR: 2025-06-26 23:25:00,185:      pdf_renderer.py:  217: C:\Users\User\Desktop\PycharmProjects\YOLOv11_Object_Detection\report.md:80: runs/detect/train/plots/loss.png: No such file or directory
+   DEBUG: 2025-06-26 23:25:00,189:      pdf_renderer.py:  470: printSegment: Пример графика метрик:
+   ERROR: 2025-06-26 23:25:00,191:      pdf_renderer.py:  217: C:\Users\User\Desktop\PycharmProjects\YOLOv11_Object_Detection\report.md:84: runs/detect/train/plots/metrics.png: No such file or directory
+   DEBUG: 2025-06-26 23:25:00,194:      pdf_renderer.py:  470: printSegment: 8. Выводы и рекомендации
+   DEBUG: 2025-06-26 23:25:00,196:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,199:      pdf_renderer.py:  470: printSegment: Модель достигла высоких метрик (mAP@0.5 = 0.965), особенно хорошо распознаёт meat и salat.
+   DEBUG: 2025-06-26 23:25:00,202:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,204:      pdf_renderer.py:  470: printSegment: Для soup требуется больше данных и аугментаций.
+   DEBUG: 2025-06-26 23:25:00,206:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,207:      pdf_renderer.py:  470: printSegment: Рекомендуется использовать GPU для ускорения обучения.
+   DEBUG: 2025-06-26 23:25:00,208:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,210:      pdf_renderer.py:  470: printSegment: Следует провести 1–2 итерации оптимизации гиперпараметров.
+   DEBUG: 2025-06-26 23:25:00,212:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,214:      pdf_renderer.py:  470: printSegment: Планируется интеграция модели через Roboflow API для реального применения.
+   DEBUG: 2025-06-26 23:25:00,218:      pdf_renderer.py:  470: printSegment: 9. Время выполнения задания
+   DEBUG: 2025-06-26 23:25:00,219:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,220:      pdf_renderer.py:  470: printSegment: Около 12 часов, включая подготовку данных, аннотацию, обучение и анализ.
+   DEBUG: 2025-06-26 23:25:00,223:      pdf_renderer.py:  470: printSegment: 10. Опыт работы с YOLO
+   DEBUG: 2025-06-26 23:25:00,224:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,226:      pdf_renderer.py:  470: printSegment: Работа с YOLOv11 и Roboflow впервые.
+   DEBUG: 2025-06-26 23:25:00,228:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2025-06-26 23:25:00,230:      pdf_renderer.py:  470: printSegment: Процесс обучения и настройки модели стал ценным практическим опытом.
+   DEBUG: 2025-06-26 23:25:00,234:      pdf_renderer.py:  470: printSegment: 11. Используемые библиотеки (requirements.txt)
+   DEBUG: 2025-06-26 23:25:00,236:      pdf_renderer.py:  470: printSegment: ultralytics
+   DEBUG: 2025-06-26 23:25:00,238:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,240:      pdf_renderer.py:  470: printSegment: opencv-python
+   DEBUG: 2025-06-26 23:25:00,242:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,243:      pdf_renderer.py:  470: printSegment: pandas
+   DEBUG: 2025-06-26 23:25:00,244:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,245:      pdf_renderer.py:  470: printSegment: matplotlib
+   DEBUG: 2025-06-26 23:25:00,246:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,248:      pdf_renderer.py:  470: printSegment: roboflow
+   DEBUG: 2025-06-26 23:25:00,249:      pdf_renderer.py:  470: printSegment: text
+   DEBUG: 2025-06-26 23:25:00,252:      pdf_renderer.py:  470: printSegment: 12. Пример кода для инференса
+   DEBUG: 2025-06-26 23:25:00,254:      pdf_renderer.py:  470: printSegment: from ultralytics import YOLO
+   DEBUG: 2025-06-26 23:25:00,256:      pdf_renderer.py:  470: printSegment: model = YOLO(
+   DEBUG: 2025-06-26 23:25:00,257:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2025-06-26 23:25:00,258:      pdf_renderer.py:  470: printSegment: runs/detect/train/weights/best.pt
+   DEBUG: 2025-06-26 23:25:00,259:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2025-06-26 23:25:00,260:      pdf_renderer.py:  470: printSegment: )
+   DEBUG: 2025-06-26 23:25:00,261:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,262:      pdf_renderer.py:  470: printSegment: results = model.predict(
+   DEBUG: 2025-06-26 23:25:00,263:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2025-06-26 23:25:00,263:      pdf_renderer.py:  470: printSegment: test
+   DEBUG: 2025-06-26 23:25:00,264:      pdf_renderer.py:  470: printSegment: _
+   DEBUG: 2025-06-26 23:25:00,265:      pdf_renderer.py:  470: printSegment: image.jpg
+   DEBUG: 2025-06-26 23:25:00,267:      pdf_renderer.py:  470: printSegment: '
+   DEBUG: 2025-06-26 23:25:00,268:      pdf_renderer.py:  470: printSegment: , imgsz=640)
+   DEBUG: 2025-06-26 23:25:00,269:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2025-06-26 23:25:00,270:      pdf_renderer.py:  470: printSegment: results.show()
+   DEBUG: 2025-06-26 23:25:00,271:      pdf_renderer.py:   53: 0, [1, 'Финальный отчёт по обучению модели YOLOv11 для распознавания блюд', 1, 68.0]
+   DEBUG: 2025-06-26 23:25:00,271:      pdf_renderer.py:   53: 1, [2, '1. Подготовка данных', 1, 118.0]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 2, [2, '2. Параметры обучения и причины выбора', 1, 235.60000000000002]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 3, [2, '3. Метрики качества модели', 1, 359.20000000000005]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 4, [2, '4. Результаты по классам', 1, 434.80000000000007]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 5, [2, '5. Обучение и оптимизация гиперпараметров', 1, 522.4000000000001]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 6, [2, '6. Анализ ошибок и сложности', 1, 640.0]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 7, [2, '7. Графики метрик', 2, 104.8]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 8, [2, '8. Выводы и рекомендации', 2, 336.40000000000003]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 9, [2, '9. Время выполнения задания', 2, 454.00000000000006]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 10, [2, '10. Опыт работы с YOLO', 2, 523.6]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 11, [2, '11. Используемые библиотеки (requirements.txt)', 2, 605.1999999999999]
+   DEBUG: 2025-06-26 23:25:00,272:      pdf_renderer.py:   53: 12, [2, '12. Пример кода для инференса', 2, 686.7999999999998]
